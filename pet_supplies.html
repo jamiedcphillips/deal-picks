@@ -14,7 +14,7 @@
 --blue:#6cb8ff;--grad:linear-gradient(135deg,#1b2550,#0b1020)}
 *{box-sizing:border-box}
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-background:var(--grad);color:var(--ink);line-height:1.6;min-height:100vh}
+background:var(--grad);color:var(--ink);line-height:1.6;min-height:100vh;padding-bottom:64px}
 .wrap{max-width:960px;margin:0 auto;padding:32px 20px}
 header.hero{text-align:center;padding:48px 16px 24px}
 .bolt{font-size:2.6rem}
@@ -29,35 +29,65 @@ text-decoration:none;color:var(--ink);transition:.18s transform,.18s box-shadow;
 .card p{color:var(--muted);font-size:.9rem;margin:0}
 .pill{display:inline-block;background:#1f2a4d;color:var(--blue);font-size:.72rem;
 padding:3px 10px;border-radius:99px;margin-top:10px}
-.btn{display:inline-block;background:var(--gold);color:#10142a;font-weight:700;
-padding:11px 18px;border-radius:10px;text-decoration:none;margin-top:8px}
+.answer{background:#101732;border-left:3px solid var(--gold);border-radius:10px;
+padding:14px 18px;margin:22px 0;color:#cdd6ee;font-size:1.02rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+background:var(--gold);color:#10142a;font-weight:700;padding:11px 20px;border-radius:10px;
+text-decoration:none;margin:10px 0;font-size:1rem}
 .btn:hover{filter:brightness(1.08)}
 ul.picks{list-style:none;padding:0;margin:18px 0}
 ul.picks li{background:var(--card);border:1px solid #233;border-radius:12px;
 padding:14px 16px;margin:10px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
 ul.picks a{color:var(--blue);text-decoration:none;font-weight:600}
 ul.picks .meta{color:var(--muted);font-size:.8rem}
+.table{width:100%;border-collapse:collapse;margin:18px 0;background:var(--card);border-radius:12px;overflow:hidden}
+.table th,.table td{padding:12px 14px;text-align:left;border-bottom:1px solid #233;font-size:.92rem}
+.table th{background:#101732;color:var(--gold)}
+.table a{color:var(--blue);text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+.trust{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:.78rem;
+margin-top:6px}
+.trust:before{content:"✓";color:#5fd38a;font-weight:700}
 .disclaimer{color:var(--muted);font-size:.78rem;border-top:1px solid #233;margin-top:36px;padding-top:18px}
 footer{text-align:center;color:var(--muted);font-size:.8rem;padding:24px}
 a.nav{color:var(--blue);text-decoration:none;margin:0 10px}
+.stickybar{position:fixed;left:0;right:0;bottom:0;background:#101732;border-top:1px solid #233;
+display:none;align-items:center;justify-content:space-between;padding:10px 16px;gap:10px;z-index:50}
+.stickybar.show{display:flex}
+.stickybar .lbl{font-size:.85rem;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stickybar .btn{margin:0;min-height:40px;padding:8px 16px;font-size:.9rem}
+.stickybar .x{background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer}
 </style></head>
 <body><div class="wrap">
 <header class="hero"><div class="bolt">⚡️</div><h1>Best Pet Supplies to Buy in July</h1>
 <p class="tagline">Updated July 11, 2026 from live trend data — the pet supplies picks people are searching for right now.</p>
-<a class="btn" href="https://www.amazon.com/s?k=pet%20supplies&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Shop Pet Supplies on Amazon →</a></header>
-<h2>Top trending picks</h2>
-<ul class="picks">  <li><a href="https://www.amazon.com/s?k=humble&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Humble</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=cable&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Cable</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=electrical&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Electrical</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=revolution&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Revolution</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=saudi&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Saudi</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=arabia&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Arabia</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=growing&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Growing</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=double&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Double</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=economies&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Economies</a><span class="meta">trending · 1 signals</span></li>
-  <li><a href="https://www.amazon.com/s?k=pebble&tag=jamiedcphil0b-21" target="_blank" rel="nofollow">Pebble</a><span class="meta">trending · 1 signals</span></li></ul>
+<a class="btn" href="https://www.amazon.com/s?k=pet%20supplies&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">See today's Pet Supplies prices on Amazon →</a>
+<span class="trust">Free returns via Amazon</span></header>
+<div class="answer"><b>Quick answer:</b> The best pet supplies picks right now are trending toward Humble, Cable, Electrical. We round up the top options so you can compare and grab the best deal on Amazon.</div>
+<h2>Top 3 at a glance</h2>
+<table class="table"><thead><tr><th>Top pick</th><th>Why</th><th>Action</th></tr></thead><tbody><tr><td><b>Humble</b></td><td>trending · 1 signals</td><td><a href="https://www.amazon.com/s?k=humble&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">See price →</a></td></tr><tr><td><b>Cable</b></td><td>trending · 1 signals</td><td><a href="https://www.amazon.com/s?k=cable&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">See price →</a></td></tr><tr><td><b>Electrical</b></td><td>trending · 1 signals</td><td><a href="https://www.amazon.com/s?k=electrical&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">See price →</a></td></tr></tbody></table>
+<h2>Full trending picks</h2>
+<ul class="picks">  <li><a href="https://www.amazon.com/s?k=humble&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Humble</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=cable&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Cable</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=electrical&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Electrical</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=revolution&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Revolution</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=saudi&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Saudi</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=arabia&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Arabia</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=growing&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Growing</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=double&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Double</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=economies&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Economies</a><span class="meta">trending · 1 signals</span></li>
+  <li><a href="https://www.amazon.com/s?k=pebble&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Pebble</a><span class="meta">trending · 1 signals</span></li></ul>
+<a class="btn" href="https://www.amazon.com/s?k=pet%20supplies&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">Compare all Pet Supplies on Amazon →</a>
+<span class="trust">Free returns via Amazon</span>
 <div class="disclaimer">Prices and availability subject to change. As an Amazon Associate we earn from qualifying purchases. ⚡️</div>
-</div>
+</div><div class="stickybar"><span class="lbl">⚡️ Top: Humble — <a class="btn" href="https://www.amazon.com/s?k=humble&tag=jamiedcphil0b-21" target="_blank" rel="sponsored nofollow">See price on Amazon →</a></span><button class="x" onclick="closeBar(this.parentNode)">×</button></div>
 <footer>⚡️ Daily Deal Picks · <a class="nav" href="about.html">About</a><a class="nav" href="privacy.html">Privacy</a><br>
 As an Amazon Associate I earn from qualifying purchases.</footer>
+<script>
+document.addEventListener('scroll',function(){
+ var b=document.querySelector('.stickybar');
+ if(!b)return;
+ if(window.scrollY>document.body.scrollHeight*0.3){b.classList.add('show');}
+});
+function closeBar(b){b.style.display='none';}
+</script>
 </body></html>
