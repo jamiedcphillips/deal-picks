@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jamiedcphillips.github.io/deal-picks/sitemap.xml
